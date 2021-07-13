@@ -1,0 +1,91 @@
+body{
+  margin: 0;
+  background: #232323;
+}
+div {
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  color: steelblue;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+button:hover{
+  color: white;
+  background: steelblue;
+}
+
+.title {
+  width:auto;
+  height: 188px;
+  background: steelblue;
+  line-height: 188px;
+}
+
+.title__txt {
+  font-size: 400%;
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-weight: 400;
+}
+
+
+.nav {
+  width: auto;
+  height: 30px;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.nav__container {
+  max-width: 600px;
+  margin: 0px auto;
+  height: 30px;
+  
+}
+
+.nav__container_new_colors {
+  float: left;
+  margin: 4px 0px;
+}
+
+.nav__container_new_colors:hover  {
+  color: white;
+  background: steelblue;
+}
+
+
+.nav__container_game_mode {
+  float: right;
+}
+.nav__container_game_mode button {
+  margin: 4px 0px;
+}
+
+.grid__boxes {
+  width: 30%;
+  background: purple;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;  
+}
+
+.grid {
+  margin: 0 auto;
+  max-width: 600px;
+  
+}
