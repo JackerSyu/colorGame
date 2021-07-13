@@ -60,7 +60,16 @@ button:hover{
   margin: 4px 0px;
 }
 
+.nav__container_message {
+  margin: 4px 0px;
+}
+
 .nav__container_new_colors:hover  {
+  color: white;
+  background: steelblue;
+}
+
+.selected {
   color: white;
   background: steelblue;
 }
