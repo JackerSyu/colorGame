@@ -7,12 +7,16 @@ var displayTargetText = document.querySelector(".title__txt");
 var modeButton = document.querySelectorAll(".nav__container_game_mode_button");
 
 init();
+
+function init (){
+  reset();
+  modeSelection();
+}
+
 newColorsButton.addEventListener('click', function(){
   reset();
 })
-function init (){
-  modeSelection();
-}
+
 function modeSelection(){
   for(let i = 0; i < modeButton.length; i++)
   {
@@ -32,6 +36,7 @@ function reset(){
   targetBox = getOneBoxAsAnswer();
   document.querySelector(".nav__container_message").textContent = "";
   document.querySelector(".title").style.background = "steelblue";
+  document.querySelector(".nav__container_new_colors").textContent = "NEW COLORS"
   displayTargetText.textContent = `RGB(${boxes[targetBox][0]}, ${boxes[targetBox][1]}, ${boxes[targetBox][2]})`;
   clickBoxHandler();
 }
@@ -53,11 +58,11 @@ function clickBoxHandler(){
   for(let i = 0; i < boxNum; i++){
     displayBoxes[i].addEventListener('click', function(){
       let clickColor = this.style.background;
-      console.log(clickColor);
       if(clickColor === `rgb(${boxes[targetBox][0]}, ${boxes[targetBox][1]}, ${boxes[targetBox][2]})`){
         document.querySelector(".title").style.background = clickColor;
         document.querySelector(".nav__container_message").textContent = "CORRECT!";
         document.querySelector(".nav__container_message").style.color = "green";
+        document.querySelector(".nav__container_new_colors").textContent = "START AGAIN!"
         changeColor(clickColor);
       }
       else
